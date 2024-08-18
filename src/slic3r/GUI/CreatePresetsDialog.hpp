@@ -282,7 +282,7 @@ private:
 private:
     std::vector<std::pair<RadioBox *, wxString>>           m_export_type_btns;
     std::vector<std::pair<::CheckBox *, Preset *>>         m_preset;         // for printer preset bundle,printer preset, process preset export
-    std::vector<std::pair<::CheckBox *, std::string>>      m_printer_name;    // for filament and peocess preset export, collaborate with m_filament_name_to_presets
+    std::vector<std::pair<::CheckBox *, std::string>>      m_printer_name;    // for filament and process preset export, collaborate with m_filament_name_to_presets
     std::unordered_map<std::string, Preset *>              m_printer_presets;//first: printer name, second: printer presets have same printer name
     std::unordered_map<std::string, std::vector<Preset *>> m_filament_presets;//first: printer name, second: filament presets have same printer name
     std::unordered_map<std::string, std::vector<Preset *>> m_process_presets;//first: printer name, second: filament presets have same printer name
