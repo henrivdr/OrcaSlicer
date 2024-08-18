@@ -201,7 +201,6 @@ indexed_triangle_set cgal_to_indexed_triangle_set(const _Mesh &cgalmesh)
     const auto &vertices = cgalmesh.vertices();
     int vsize = int(vertices.size());
 
-    // HvdR: https://github.com/SoftFever/OrcaSlicer/pull/6439 
     for (const auto &vi : vertices) {
         auto &v = cgalmesh.point(vi); // Don't ask...
         its.vertices.emplace_back(to_vec3f(v));
