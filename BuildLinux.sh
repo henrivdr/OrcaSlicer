@@ -122,7 +122,7 @@ then
     fi
     if [ ! -d "deps/build" ]
     then
-        mkdir deps/build
+        mkdir -p deps/build
     fi
     if [[ -n "${BUILD_DEBUG}" ]]
     then

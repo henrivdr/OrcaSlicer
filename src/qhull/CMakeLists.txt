@@ -10,7 +10,8 @@
 
 # see bug report: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=925540
 
-find_package(Qhull 7.2 QUIET)
+#find_package(Qhull 7.2 QUIET) # Qhull::qhullcpp target was not found
+find_package(Qhull 8.0.2 QUIET) # warns only deps 8.0.1 found
 
 add_library(qhull INTERFACE)
 
