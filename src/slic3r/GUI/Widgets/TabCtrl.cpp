@@ -120,11 +120,6 @@ bool TabCtrl::DeleteItem(int item)
     if (item < 0 || item >= btns.size()) {
         return false;
     }
-    const bool selection_changed = sel >= item;
-
-    if (selection_changed) {
-        sendTabCtrlEvent(true);
-    }
 
     Button* btn = btns[item];
     btn->Destroy();
@@ -132,12 +127,9 @@ bool TabCtrl::DeleteItem(int item)
     sizer->Remove(item * 2);
     if (btns.size() > 1)
         sizer->GetItem(sizer->GetItemCount() - 1)->SetMinSize({0, 0});
-
-    if (selection_changed) {
-        sel--;  // `relayout()` uses `sel` so we need to update this before calling `relayout()`
-    }
     relayout();
-    if (selection_changed) {
+    if (sel >= item) {
+        sel--;
         sendTabCtrlEvent();
     }
 
