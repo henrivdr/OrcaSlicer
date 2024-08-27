@@ -13,7 +13,7 @@
 
 // @ORCA_CHECK_GCODE_PLACEHOLDERS@
 // Logic taken from ./src/libslic3r/GCode.hpp
-#if !defined(NDEBUG)
+#if !defined(NDEBUG) && !defined(ORCA_CHECK_GCODE_PLACEHOLDERS)
     #define ORCA_CHECK_GCODE_PLACEHOLDERS 1
 #else
     #define ORCA_CHECK_GCODE_PLACEHOLDERS 0
