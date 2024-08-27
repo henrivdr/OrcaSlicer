@@ -1,0 +1,61 @@
+{
+    "version": 8,
+    "configurePresets": [
+        {
+            "name": "linux-debug-config",
+            "displayName": "Configure Debug preset",
+            "description": "Sets Ninja generator, build and install directory",
+            "generator": "Ninja",
+            "binaryDir": "build",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "BBL_INTERNAL_TESTING": "1",
+                "CMAKE_PREFIX_PATH": "${workspaceFolder}/deps/build/destdir/usr/local",
+                "SLIC3R_STATIC": "1",
+                "ORCA_TOOLS": "ON",
+                "CMAKE_INSTALL_PREFIX": "${workspaceFolder}/OrcaSlicer",
+                "ORCA_CHECK_GCODE_PLACEHOLDERS": "0",                
+                "SLIC3R_GTK": "3"
+            }
+        },
+        {
+            "name": "linux-RelWithDebInfo-config",
+            "displayName": "Configure RelWithDebInfo preset",
+            "description": "Sets Ninja generator, build and install directory",
+            "generator": "Ninja",
+            "binaryDir": "build",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+                "BBL_INTERNAL_TESTING": "1",
+                "CMAKE_PREFIX_PATH": "${workspaceFolder}/deps/build/destdir/usr/local",
+                "SLIC3R_STATIC": "1",
+                "ORCA_TOOLS": "ON",
+                "CMAKE_INSTALL_PREFIX": "${workspaceFolder}/OrcaSlicer",
+                "ORCA_CHECK_GCODE_PLACEHOLDERS": "0",                
+                "SLIC3R_GTK": "3"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "linux-debug-build",
+            "displayName": "Build Debug preset",
+            "description": "Sets Ninja generator, compilers, build and install directory, debug build type",
+            "configurePreset": "linux-debug-config",
+            "cleanFirst": false,
+            "targets": [
+                "OrcaSlicer"
+            ]
+        },
+        {
+            "name": "linux-RelWithDebInfo-build",
+            "displayName": "Build RelWithDebInfo preset",
+            "description": "Sets Ninja generator, compilers, build and install directory, debug build type",
+            "configurePreset": "linux-RelWithDebInfo-config",
+            "cleanFirst": false,
+            "targets": [
+                "OrcaSlicer"
+            ]
+        }
+    ]
+}
