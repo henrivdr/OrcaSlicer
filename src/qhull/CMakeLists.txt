@@ -33,11 +33,11 @@ endif()
 else(Qhull_FOUND)
 
 project(qhull)
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 3.13)
 
 # Define qhull_VERSION in CMakeLists.txt, Makefile, qhull-exports.def, qhull_p-exports.def, qhull_r-exports.def, qhull-warn.pri
-set(qhull_VERSION2 "2015.2 2016/01/18")  # not used, See global.c, global_r.c, rbox.c, rbox_r.c
-set(qhull_VERSION     "7.2.0")  # Advance every release
+set(qhull_VERSION2 "2020.2 2020/08/31")  # not used, See global.c, global_r.c, rbox.c, rbox_r.c
+set(qhull_VERSION     "8.0.2")  # Advance every release
 
 #include(CMakeModules/CheckLFS.cmake)
 #option(WITH_LFS "Enable Large File Support" ON)
