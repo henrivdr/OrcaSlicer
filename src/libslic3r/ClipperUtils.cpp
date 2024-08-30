@@ -94,18 +94,19 @@ template<typename PointType> inline void clip_clipper_polygon_with_subject_bbox_
     }
 
     // Never produce just a single point output polygon.
-    if (!out.empty())
+    if(!out.empty()) {
         if(get_entire_polygons){
             out=src;
         }else{
             if (int sides_next = sides(out.front());
-            // The last point is inside. Take it.
-            sides_this == 0 ||
-            // Either this point is outside and previous or next is inside, or
-            // the edge possibly cuts corner of the bounding box.
-            (sides_prev & sides_this & sides_next) == 0)
-            out.emplace_back(src.back());
+                // The last point is inside. Take it.
+                sides_this == 0 ||
+                // Either this point is outside and previous or next is inside, or
+                // the edge possibly cuts corner of the bounding box.
+                (sides_prev & sides_this & sides_next) == 0)
+                out.emplace_back(src.back());                
         }
+    }
 
 }
 
