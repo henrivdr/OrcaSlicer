@@ -1260,7 +1260,7 @@ msgstr ""
 msgid "Center of circle"
 msgstr ""
 
-msgid "ShiftLeft mouse button"
+msgid "Left mouse button"
 msgstr ""
 
 msgid "Select feature"
