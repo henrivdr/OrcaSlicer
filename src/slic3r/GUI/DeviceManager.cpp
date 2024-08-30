@@ -3873,7 +3873,7 @@ int MachineObject::parse_json(std::string payload, bool key_field_only)
                                     }
                                 }
                                 if (ams_exist_bits != last_ams_exist_bits
-                                    || last_tray_exist_bits != last_tray_exist_bits
+                                    || tray_exist_bits != last_tray_exist_bits // warning: self-comparison always evaluates to false [-Wtautological-compare]
                                     || tray_is_bbl_bits != last_is_bbl_bits
                                     || tray_read_done_bits != last_read_done_bits
                                     || last_ams_version != ams_version) {
