@@ -4772,7 +4772,7 @@ void Tab::rebuild_page_tree()
     if (sel_item == m_last_select_item)
         m_last_select_item = item;
     else
-        m_last_select_item = NULL;
+        m_last_select_item = -1;
 
     // allow activate page before selection of a page_tree item
     m_disable_tree_sel_changed_event = false;
