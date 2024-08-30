@@ -1654,10 +1654,10 @@ std::string GuideFrame::w2s(wxString sSrc)
     return std::string(sSrc.mb_str());
 }
 
-void GuideFrame::GetStardardFilePath(std::string &FilePath) {
-    StrReplace(FilePath, "\\", w2s(wxString::Format("%c", boost::filesystem::path::preferred_separator)));
-    StrReplace(FilePath, "\/", w2s(wxString::Format("%c", boost::filesystem::path::preferred_separator)));
-}
+// void GuideFrame::GetStardardFilePath(std::string &FilePath) {
+//     StrReplace(FilePath, "\\", w2s(wxString::Format("%c", boost::filesystem::path::preferred_separator)));
+//     StrReplace(FilePath, "\/", w2s(wxString::Format("%c", boost::filesystem::path::preferred_separator)));
+// }
 
 bool GuideFrame::LoadFile(std::string jPath, std::string &sContent)
 {
