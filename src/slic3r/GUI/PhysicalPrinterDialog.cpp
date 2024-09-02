@@ -260,8 +260,8 @@ void PhysicalPrinterDialog::build_printhost_settings(ConfigOptionsGroup* m_optgr
         ConfigOptionDef def;
         def.type     = coBool;
         def.width    = Field::def_width();
-        def.label    = L("View print host webui in Device tab");
-        def.tooltip  = L("Replace the BambuLab's device tab with print host webui");
+        def.label    = L("View print host WebUI in Device tab");
+        def.tooltip  = L("Replace the BambuLab's device tab with print host WebUI");
         def.set_default_value(new ConfigOptionBool(false));
 
         auto option = Option(def, "bbl_use_print_host_webui");

@@ -645,6 +645,7 @@ msgstr "Hoek"
 
 msgid ""
 "Embedded\n"
+"Embedded\n"
 "depth"
 msgstr "Embedded depth"
 
@@ -1109,6 +1110,7 @@ msgid "Undefined stroke type"
 msgstr ""
 
 msgid "Path can't be healed from self-intersection and multiple points."
+msgid "Path can't be healed from self-intersection and multiple points."
 msgstr ""
 
 msgid "Final shape constains self-intersection or multiple points with same coordinate."
@@ -1463,8 +1465,8 @@ msgstr "Kies één of meer bestanden (3mf/step/stl/svg/obj/amf):"
 msgid "Choose ZIP file"
 msgstr "Kies ZIP bestand"
 
-msgid "Choose one file (gcode/3mf):"
-msgstr "Kies één bestand (gcode/3mf):"
+msgid "Choose one file (G-code/3mf):"
+msgstr "Kies één bestand (G-code/3mf):"
 
 msgid "Some presets are modified."
 msgstr "Sommige voorinstellingen zijn aangepast."
@@ -1557,6 +1559,7 @@ msgid "Orca Slicer GUI initialization failed"
 msgstr "Initialisatie van Orca Slicer GUI is mislukt"
 
 #, boost-format
+msgid "Fatal error, exception caught: %1%"
 msgid "Fatal error, exception caught: %1%"
 msgstr "Fatale fout, uitzondering tegengehouden: %1%"
 
@@ -2443,6 +2446,7 @@ msgstr ""
 "Deze objecten kunnen niet automatisch worden gerangschikt."
 
 msgid "No arrangeable objects are selected."
+msgid "No arrangeable objects are selected."
 msgstr "Er zijn geen objecten geselecteerd die geschikt kunnen worden."
 
 msgid ""
@@ -2601,10 +2605,10 @@ msgstr "Succesvol verzonden. Springt automatisch naar de volgende pagina in %ss"
 msgid "An SD card needs to be inserted before printing via LAN."
 msgstr "Er moet een MicroSD-kaart worden geplaatst voordat er via LAN kan worden afgedrukt."
 
-msgid "Sending gcode file over LAN"
+msgid "Sending G-code file over LAN"
 msgstr "G-codebestand verzenden via LAN"
 
-msgid "Sending gcode file to sdcard"
+msgid "Sending G-code file to SD card"
 msgstr "G-codebestand naar microSD-kaart verzenden"
 
 #, c-format, boost-format
@@ -3101,7 +3105,7 @@ msgstr "Het uitvoeren van post-processing scripts"
 msgid "Successfully executed post-processing script"
 msgstr "Successfully executed post-processing script"
 
-msgid "Unknown error occured during exporting G-code."
+msgid "Unknown error occurred during exporting G-code."
 msgstr "Onbekende fout opgetreden tijdens exporteren van de G-code."
 
 #, boost-format
@@ -3156,10 +3160,11 @@ msgstr "Onbekende fout tijdens het exporteren van de G-code"
 
 #, boost-format
 msgid ""
-"Failed to save gcode file.\n"
+"Failed to save G-code file.\n"
 "Error message: %1%.\n"
 "Source file %2%."
 msgstr ""
+"Het is niet gelukt het G-code bestand op te slaan.\n"
 "Het is niet gelukt het G-code bestand op te slaan.\n"
 "Foutmelding: %1%.\n"
 "Bronbestand %2%."
@@ -3712,8 +3717,8 @@ msgstr "Gepauzeerd vanwege een fout in de temperatuurregeling van de kamer"
 msgid "Cooling chamber"
 msgstr "Koelkamer"
 
-msgid "Paused by the Gcode inserted by user"
-msgstr "Gepauzeerd door de Gcode ingevoegd door gebruiker"
+msgid "Paused by the G-code inserted by user"
+msgstr "Gepauzeerd door de G-code ingevoegd door gebruiker"
 
 msgid "Motor noise showoff"
 msgstr "Motorgeluid showoff"
@@ -3790,6 +3795,7 @@ msgstr "Geselecteerde diameter en machinediameter komen niet overeen"
 
 msgid "Failed to generate cali gcode"
 msgstr "Cali G-code niet gegenereerd"
+msgstr "Cali G-code niet gegenereerd"
 
 msgid "Calibration error"
 msgstr "Kalibratiefout"
@@ -3824,7 +3830,7 @@ msgstr ""
 msgid "Built-in placeholders (Double click item to add to G-code)"
 msgstr ""
 
-msgid "Search gcode placeholders"
+msgid "Search G-code placeholders"
 msgstr ""
 
 msgid "Add selected placeholder to G-code"
@@ -4646,6 +4652,7 @@ msgid "Show &G-code Window"
 msgstr ""
 
 msgid "Show g-code window in Preview scene"
+msgid "Show g-code window in Preview scene"
 msgstr ""
 
 msgid "Show 3D Navigator"
@@ -4853,7 +4860,7 @@ msgstr ""
 msgid "Printer camera is malfunctioning."
 msgstr "De printercamera werkt niet goed."
 
-msgid "Problem occured. Please update the printer firmware and try again."
+msgid "Problem occurred. Please update the printer firmware and try again."
 msgstr ""
 "Er heeft zich een probleem voorgedaan. Werk de printerfirmware bij en probeer het opnieuw."
 
@@ -4997,8 +5004,8 @@ msgstr ""
 msgid "Initialize failed (Storage unavailable, insert SD card.)!"
 msgstr ""
 
-msgid "LAN Connection Failed (Failed to view sdcard)"
-msgstr "LAN Connection Failed (Failed to view sdcard)"
+msgid "LAN Connection Failed (Failed to view SD card)"
+msgstr "LAN Connection Failed (Failed to view SD card)"
 
 msgid "Browsing file in SD card is not supported in LAN Only Mode."
 msgstr "Browsing file in SD card is not supported in LAN Only Mode."
@@ -5288,6 +5295,7 @@ msgstr "Informatie"
 msgid "Get oss config failed."
 msgstr "Het ophalen van de oss-configuratie is mislukt."
 
+msgid "Upload Pictures"
 msgid "Upload Pictures"
 msgstr "Upload Pictures"
 
@@ -6033,7 +6041,7 @@ msgstr ""
 
 msgid ""
 "Preview only mode:\n"
-"The loaded file contains gcode only, Can not enter the Prepare page"
+"The loaded file contains G-code only, Can not enter the Prepare page"
 msgstr ""
 "Voorvertoning modus:\n"
 "Het geladen bestand bevat alleen G-code, hierdoor is het niet mogelijk om naar de pagina "
@@ -8697,9 +8705,10 @@ msgid "Your print is very close to the priming regions. Make sure there is no co
 msgstr ""
 
 msgid ""
-"Failed to generate gcode for invalid custom G-code.\n"
+"Failed to generate G-code for invalid custom G-code.\n"
 "\n"
 msgstr ""
+"Kan G-code niet genereren voor ongeldige handmatige G-code.\n"
 "Kan G-code niet genereren voor ongeldige handmatige G-code.\n"
 "\n"
 
@@ -10968,7 +10977,7 @@ msgstr ""
 msgid "G-code flavor"
 msgstr "G-code type"
 
-msgid "What kind of gcode the printer is compatible with"
+msgid "What kind of G-code the printer is compatible with"
 msgstr "Het type G-code waarmee de printer compatibel is"
 
 msgid "Klipper"
@@ -12659,7 +12668,7 @@ msgstr ""
 "Deze G-code wordt ingevoegd wanneer filament wordt vervangen, inclusief T-commando's om "
 "gereedschapswissel te activeren."
 
-msgid "This gcode is inserted when the extrusion role is changed"
+msgid "This G-code is inserted when the extrusion role is changed"
 msgstr ""
 
 msgid ""
@@ -14887,7 +14896,7 @@ msgstr "Connection to Duet is working correctly."
 msgid "Could not connect to Duet"
 msgstr "Kan geen verbinding maken met Duet"
 
-msgid "Unknown error occured"
+msgid "Unknown error occurred"
 msgstr "Onbekende fout opgetreden"
 
 msgid "Wrong password"
@@ -15884,10 +15893,10 @@ msgstr ""
 #~ msgid "Load failed [%d]"
 #~ msgstr "Load failed [%d]"
 
-#~ msgid "Failed to fetching model infomations from printer."
+#~ msgid "Failed to fetching model information from printer."
 #~ msgstr "Failed to fetch model infomation from printer."
 
-#~ msgid "Failed to parse model infomations."
+#~ msgid "Failed to parse model information."
 #~ msgstr "Failed to parse model infomation"
 
 #~ msgid ""
@@ -16237,7 +16246,7 @@ msgstr ""
 #~ "Wist u dat u een beschadigd 3D-model kunt repareren om veel snijproblemen te voorkomen?"
 
 # Source and destination string both English but don't match!
-#~ msgid "Embeded"
+#~ msgid "Embedded"
 #~ msgstr "Embedded"
 
 #~ msgid ""

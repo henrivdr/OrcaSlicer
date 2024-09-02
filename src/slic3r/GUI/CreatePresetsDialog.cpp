@@ -1673,7 +1673,7 @@ wxBoxSizer *CreatePrinterPresetDialog::create_printer_item(wxWindow *parent)
     m_custom_vendor_text_ctrl->SetHint(_L("Input Custom Vendor"));
     m_custom_vendor_text_ctrl->Bind(wxEVT_CHAR, [this](wxKeyEvent &event) {
         int key = event.GetKeyCode();
-        if (cannot_input_key.find(key) != cannot_input_key.end()) { // "@" can not be inputed
+        if (cannot_input_key.find(key) != cannot_input_key.end()) { // "@" can not be entered
             event.Skip(false);
             return;
         }
@@ -1685,7 +1685,7 @@ wxBoxSizer *CreatePrinterPresetDialog::create_printer_item(wxWindow *parent)
     m_custom_model_text_ctrl->SetHint(_L("Input Custom Model"));
     m_custom_model_text_ctrl->Bind(wxEVT_CHAR, [this](wxKeyEvent &event) {
         int key = event.GetKeyCode();
-        if (cannot_input_key.find(key) != cannot_input_key.end()) { // "@" can not be inputed
+        if (cannot_input_key.find(key) != cannot_input_key.end()) { // "@" can not be entered
             event.Skip(false);
             return;
         }

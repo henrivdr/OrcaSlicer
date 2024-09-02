@@ -819,16 +819,16 @@ UnsavedChangesDialog::UnsavedChangesDialog(Preset::Type type, PresetCollection *
 
 inline int UnsavedChangesDialog::ShowModal()
 {
-    auto choise_key = "save_preset_choise"; 
-    auto choise     = wxGetApp().app_config->get(choise_key);
+    auto choice_key = "save_preset_choice"; 
+    auto choice     = wxGetApp().app_config->get(choice_key);
     long result = 0;
-    if ((m_buttons & REMEMBER_CHOISE) && !choise.empty() && wxString(choise).ToLong(&result) && (1 << result) & (m_buttons | DONT_SAVE)) {
+    if ((m_buttons & REMEMBER_CHOISE) && !choice.empty() && wxString(choice).ToLong(&result) && (1 << result) & (m_buttons | DONT_SAVE)) {
         m_exit_action = Action(result);
         return 0;
     }
     int r = wxDialog::ShowModal();
     if (r != wxID_CANCEL && dynamic_cast<::CheckBox*>(FindWindowById(wxID_APPLY))->GetValue()) {
-        wxGetApp().app_config->set(choise_key, std::to_string(int(m_exit_action)));
+        wxGetApp().app_config->set(choice_key, std::to_string(int(m_exit_action)));
     }
     return r;
 }

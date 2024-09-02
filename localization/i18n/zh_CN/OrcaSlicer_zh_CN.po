@@ -645,6 +645,7 @@ msgstr "角度"
 
 msgid ""
 "Embedded\n"
+"Embedded\n"
 "depth"
 msgstr "内嵌深度"
 
@@ -1111,9 +1112,11 @@ msgid "Undefined stroke type"
 msgstr "未定义的描边类型"
 
 msgid "Path can't be healed from self-intersection and multiple points."
+msgid "Path can't be healed from self-intersection and multiple points."
 msgstr ""
 
 msgid ""
+"Final shape contains self-intersection or multiple points with same "
 "Final shape contains self-intersection or multiple points with same "
 "coordinate."
 msgstr ""
@@ -1470,13 +1473,14 @@ msgstr "选择一个或多个文件（3mf/step/stl/svg/obj/amf）："
 msgid "Choose ZIP file"
 msgstr "选择ZIP文件"
 
-msgid "Choose one file (gcode/3mf):"
+msgid "Choose one file (G-code/3mf):"
 msgstr "选择一个文件（gcode/3mf）："
 
 msgid "Some presets are modified."
 msgstr "预设已被修改。"
 
 msgid ""
+"You can keep the modified presets to the new project, discard or save "
 "You can keep the modified presets to the new project, discard or save "
 "changes as new presets."
 msgstr "您可以保留未保存修改的预设应用到新项目中，或者选择忽略。"
@@ -1557,6 +1561,7 @@ msgid "Orca Slicer GUI initialization failed"
 msgstr "逆戟鲸图形界面初始化失败"
 
 #, boost-format
+msgid "Fatal error, exception caught: %1%"
 msgid "Fatal error, exception caught: %1%"
 msgstr "致命错误，捕获到异常：%1%"
 
@@ -2051,6 +2056,7 @@ msgid ""
 "\n"
 "To manipulate with solid parts or negative volumes you have to invalidate "
 "cut information first."
+"cut information first."
 msgstr ""
 "该行为将破坏切割关系，在此之后将无法保证模型一致性。\n"
 "\n"
@@ -2062,6 +2068,7 @@ msgstr "删除所有连接件"
 msgid "Deleting the last solid part is not allowed."
 msgstr "不允许删除对象的最后一个实体零件。"
 
+msgid "The target object contains only one part and can not be split."
 msgid "The target object contains only one part and can not be split."
 msgstr "目标对象仅包含一个零件，无法被拆分。"
 
@@ -2434,6 +2441,7 @@ msgstr ""
 "无法对这些对象做自动摆盘。"
 
 msgid "No arrangeable objects are selected."
+msgid "No arrangeable objects are selected."
 msgstr "没有可摆盘的对象被选中。"
 
 msgid ""
@@ -2592,10 +2600,10 @@ msgstr "已成功发送。将自动跳转到%ss中的下一页。"
 msgid "An SD card needs to be inserted before printing via LAN."
 msgstr "需要插入SD卡后方可发送局域网打印"
 
-msgid "Sending gcode file over LAN"
+msgid "Sending G-code file over LAN"
 msgstr "通过局域网发送gcode文件"
 
-msgid "Sending gcode file to sdcard"
+msgid "Sending G-code file to SD card"
 msgstr "发送gcode文件到sd卡"
 
 #, c-format, boost-format
@@ -3074,6 +3082,7 @@ msgid "Successfully executed post-processing script"
 msgstr "成功执行后处理脚本"
 
 msgid "Unknown error occurred during exporting G-code."
+msgid "Unknown error occurred during exporting G-code."
 msgstr "导出 G-Code 时出现未知错误。"
 
 #, boost-format
@@ -3127,7 +3136,7 @@ msgstr "导出G-code文件发生未知错误。"
 
 #, boost-format
 msgid ""
-"Failed to save gcode file.\n"
+"Failed to save G-code file.\n"
 "Error message: %1%.\n"
 "Source file %2%."
 msgstr ""
@@ -3522,6 +3531,7 @@ msgid ""
 "Yes - Change ensure vertical shell thickness to Moderate and enable "
 "alternate extra wall\n"
 "No  - Don't use alternate extra wall"
+"No  - Don't use alternate extra wall"
 msgstr ""
 "自动调整这些设置？\n"
 "是 - 自动调整确保垂直外壳厚度为“适量”，并开启交替添加额外内墙\n"
@@ -3679,7 +3689,7 @@ msgstr "暂停，由于仓温控制错误"
 msgid "Cooling chamber"
 msgstr "冷却仓温"
 
-msgid "Paused by the Gcode inserted by user"
+msgid "Paused by the G-code inserted by user"
 msgstr "暂停，由于用户插入的Gcode"
 
 msgid "Motor noise showoff"
@@ -3789,7 +3799,7 @@ msgstr "编辑自定义G-code (%1%)"
 msgid "Built-in placeholders (Double click item to add to G-code)"
 msgstr ""
 
-msgid "Search gcode placeholders"
+msgid "Search G-code placeholders"
 msgstr ""
 
 msgid "Add selected placeholder to G-code"
@@ -4224,7 +4234,7 @@ msgstr "尺寸："
 
 #, c-format, boost-format
 msgid ""
-"Conflicts of gcode paths have been found at layer %d, z = %.2lf mm. Please "
+"Conflicts of G-code paths have been found at layer %d, z = %.2lf mm. Please "
 "separate the conflicted objects farther (%s <-> %s)."
 msgstr ""
 "发现gcode路径在层%d，高为%.2lf mm处的冲突。请将有冲突的对象分离得更远(%s <-> "
@@ -4614,6 +4624,7 @@ msgid "Show &G-code Window"
 msgstr "显示G-code窗口"
 
 msgid "Show g-code window in Preview scene"
+msgid "Show g-code window in Preview scene"
 msgstr "显示G-code窗口"
 
 msgid "Show 3D Navigator"
@@ -4826,6 +4837,7 @@ msgid "Printer camera is malfunctioning."
 msgstr "打印机摄像头异常。"
 
 msgid "Problem occurred. Please update the printer firmware and try again."
+msgid "Problem occurred. Please update the printer firmware and try again."
 msgstr "出现了一些问题。请更新打印机固件后重试。"
 
 msgid ""
@@ -4963,7 +4975,7 @@ msgstr "当前固件暂不支持查看SD卡中文件。请更新打印机固件�
 msgid "Initialize failed (Storage unavailable, insert SD card.)!"
 msgstr "初始化失败（存储不可用，请插入 SD 卡）！"
 
-msgid "LAN Connection Failed (Failed to view sdcard)"
+msgid "LAN Connection Failed (Failed to view SD card)"
 msgstr "局域网连接失败（无法查看SD卡）"
 
 msgid "Browsing file in SD card is not supported in LAN Only Mode."
@@ -5252,6 +5264,7 @@ msgstr "信息"
 msgid "Get oss config failed."
 msgstr "获取oss配置失败。"
 
+msgid "Upload Pictures"
 msgid "Upload Pictures"
 msgstr "上传图片"
 
@@ -5977,7 +5990,7 @@ msgstr "未检测到网络插件。网络相关功能不可用。"
 
 msgid ""
 "Preview only mode:\n"
-"The loaded file contains gcode only, Can not enter the Prepare page"
+"The loaded file contains G-code only, Can not enter the Prepare page"
 msgstr ""
 "仅预览模式：\n"
 "被加载的文件仅包含G-Code，不支持进入准备页面"
@@ -6030,7 +6043,7 @@ msgstr "导入 SLA 存档"
 msgid "The selected file"
 msgstr "已选择的文件"
 
-msgid "does not contain valid gcode."
+msgid "does not contain valid G-code."
 msgstr "不包含有效的G-code文件。"
 
 msgid "Error occurs while loading G-code file"
@@ -8568,7 +8581,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Failed to generate gcode for invalid custom G-code.\n"
+"Failed to generate G-code for invalid custom G-code.\n"
 "\n"
 msgstr ""
 "由于错误的自定义G-code，G-code生成失败。\n"
@@ -9754,7 +9767,7 @@ msgid "Between Object Gcode"
 msgstr "对象之间Gcode"
 
 msgid ""
-"Insert Gcode between objects. This parameter will only come into effect when "
+"Insert G-code between objects. This parameter will only come into effect when "
 "you print your models object by object"
 msgstr "在对象之间插入 Gcode。此参数仅在逐个打印模型物体时生效。"
 
@@ -10058,7 +10071,7 @@ msgstr "流量比例"
 msgid ""
 "The material may have volumetric change after switching between molten state "
 "and crystalline state. This setting changes all extrusion flow of this "
-"filament in gcode proportionally. Recommended value range is between 0.95 "
+"filament in G-code proportionally. Recommended value range is between 0.95 "
 "and 1.05. Maybe you can tune this value to get nice flat surface when there "
 "has slight overflow or underflow"
 msgstr ""
@@ -10250,7 +10263,7 @@ msgid "Time to unload old filament when switch filament. For statistics only"
 msgstr "切换耗材丝时，卸载旧的耗材丝所需时间。只用于统计信息。"
 
 msgid ""
-"Filament diameter is used to calculate extrusion in gcode, so it's important "
+"Filament diameter is used to calculate extrusion in G-code, so it's important "
 "and should be accurate"
 msgstr "耗材丝直径被用于计算G-code文件中的挤出量。因此很重要，应尽可能精确。"
 
@@ -10902,7 +10915,7 @@ msgid ""
 "unsupported).\n"
 "It won't move fan comands from custom gcodes (they act as a sort of "
 "'barrier').\n"
-"It won't move fan comands into the start gcode if the 'only custom start "
+"It won't move fan comands into the start G-code if the 'only custom start "
 "gcode' is activated.\n"
 "Use 0 to deactivate."
 msgstr ""
@@ -10958,7 +10971,7 @@ msgstr ""
 msgid "G-code flavor"
 msgstr "G-code风格"
 
-msgid "What kind of gcode the printer is compatible with"
+msgid "What kind of G-code the printer is compatible with"
 msgstr "打印机兼容的G-code风格'"
 
 msgid "Klipper"
@@ -11180,7 +11193,7 @@ msgid ""
 "uses the default method."
 msgstr "熨烫的角度。设为负值将禁用此功能并使用默认方法。"
 
-msgid "This gcode part is inserted at every layer change after lift z"
+msgid "This G-code part is inserted at every layer change after lift z"
 msgstr "在每次换层抬升Z高度之后插入这段G-code。"
 
 msgid "Supports silent mode"
@@ -11206,7 +11219,7 @@ msgstr ""
 
 msgid ""
 "This G-code will be used as a code for the pause print. User can insert "
-"pause G-code in gcode viewer"
+"pause G-code in G-code viewer"
 msgstr "该G-code用于暂停打印。您可以在gcode预览中插入暂停G-code"
 
 msgid "This G-code will be used as a custom code"
@@ -11404,7 +11417,7 @@ msgstr "平滑段长度"
 
 msgid ""
 "A lower value results in smoother extrusion rate transitions. However, this "
-"results in a significantly larger gcode file and more instructions for the "
+"results in a significantly larger G-code file and more instructions for the "
 "printer to process. \n"
 "\n"
 "Default value of 3 works well for most cases. If your printer is stuttering, "
@@ -11679,7 +11692,7 @@ msgstr ""
 
 msgid ""
 "G-code path is genereated after simplifing the contour of model to avoid too "
-"much points and gcode lines in gcode file. Smaller value means higher "
+"much points and G-code lines in G-code file. Smaller value means higher "
 "resolution and more time to slice"
 msgstr ""
 "为了避免G-code文件中过密集的点和走线，G-code走线通常是在简化模型的外轮廓之后"
@@ -12127,7 +12140,7 @@ msgstr ""
 "如果打印机设置为不使用擦拭塔，使用非零值是有用的。"
 
 msgid ""
-"The printing speed in exported gcode will be slowed down, when the estimated "
+"The printing speed in exported G-code will be slowed down, when the estimated "
 "layer time is shorter than this value, to get better cooling for these layers"
 msgstr ""
 "当层预估打印时间小于这个数值时，打印速度将会降低，从而获得更好的冷却效果。"
@@ -12716,11 +12729,11 @@ msgstr ""
 "再闭合。"
 
 msgid ""
-"This gcode is inserted when change filament, including T command to trigger "
+"This G-code is inserted when change filament, including T command to trigger "
 "tool change"
 msgstr "换料时插入的G-code，包括T命令。"
 
-msgid "This gcode is inserted when the extrusion role is changed"
+msgid "This G-code is inserted when the extrusion role is changed"
 msgstr "当挤出类型改变时会插入此G-code"
 
 msgid ""
@@ -13185,7 +13198,7 @@ msgstr "以最小尺寸导出3mf。"
 msgid "No check"
 msgstr "不要检查"
 
-msgid "Do not run any validity checks, such as gcode path conflicts check."
+msgid "Do not run any validity checks, such as G-code path conflicts check."
 msgstr "不要运行任何有效性检查，如gcode路径冲突检查。"
 
 msgid "Ensure on bed"
@@ -13224,7 +13237,7 @@ msgstr ""
 msgid "Load custom gcode"
 msgstr "加载自定义G-code"
 
-msgid "Load custom gcode from json"
+msgid "Load custom G-code from json"
 msgstr "从json文件加载自定义G-code"
 
 msgid "Current z-hop"
@@ -14976,6 +14989,7 @@ msgid "Could not connect to Duet"
 msgstr "无法连接到 Duet 控制器。"
 
 msgid "Unknown error occurred"
+msgid "Unknown error occurred"
 msgstr "发生了未知错误。"
 
 msgid "Wrong password"
@@ -15870,8 +15884,10 @@ msgstr ""
 #~ msgstr "加载失败 [%d]"
 
 #~ msgid "Failed to fetching model information from printer."
+#~ msgid "Failed to fetching model information from printer."
 #~ msgstr "无法从打印机获取模型信息。"
 
+#~ msgid "Failed to parse model information."
 #~ msgid "Failed to parse model information."
 #~ msgstr "解析模型信息失败。"
 
@@ -16376,6 +16392,7 @@ msgstr ""
 #~ "修复模型\n"
 #~ "您知道吗？您可以修复一个损坏的3D模型以避免诸多切片问题。"
 
+#~ msgid "Embedded"
 #~ msgid "Embedded"
 #~ msgstr "嵌入的"
 
