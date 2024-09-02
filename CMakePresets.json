@@ -4,7 +4,7 @@
         {
             "name": "linux-debug-config",
             "displayName": "Configure Debug preset",
-            "description": "Sets Ninja generator, build and install directory",
+            "description": "",
             "generator": "Ninja",
             "binaryDir": "build",
             "cacheVariables": {
@@ -14,14 +14,14 @@
                 "SLIC3R_STATIC": "1",
                 "ORCA_TOOLS": "ON",
                 "CMAKE_INSTALL_PREFIX": "${workspaceFolder}/OrcaSlicer",
-                "ORCA_CHECK_GCODE_PLACEHOLDERS": "0",                
+                "ORCA_CHECK_GCODE_PLACEHOLDERS": "0",
                 "SLIC3R_GTK": "3"
             }
         },
         {
             "name": "linux-RelWithDebInfo-config",
             "displayName": "Configure RelWithDebInfo preset",
-            "description": "Sets Ninja generator, build and install directory",
+            "description": "",
             "generator": "Ninja",
             "binaryDir": "build",
             "cacheVariables": {
@@ -31,7 +31,7 @@
                 "SLIC3R_STATIC": "1",
                 "ORCA_TOOLS": "ON",
                 "CMAKE_INSTALL_PREFIX": "${workspaceFolder}/OrcaSlicer",
-                "ORCA_CHECK_GCODE_PLACEHOLDERS": "0",                
+                "ORCA_CHECK_GCODE_PLACEHOLDERS": "0",
                 "SLIC3R_GTK": "3"
             }
         }
@@ -39,8 +39,8 @@
     "buildPresets": [
         {
             "name": "linux-debug-build",
-            "displayName": "Build Debug preset",
-            "description": "Sets Ninja generator, compilers, build and install directory, debug build type",
+            "displayName": "Build preset - Debug",
+            "description": "",
             "configurePreset": "linux-debug-config",
             "cleanFirst": false,
             "targets": [
@@ -49,13 +49,44 @@
         },
         {
             "name": "linux-RelWithDebInfo-build",
-            "displayName": "Build RelWithDebInfo preset",
-            "description": "Sets Ninja generator, compilers, build and install directory, debug build type",
+            "displayName": "Build preset - RelWithDebInfo",
+            "description": "",
             "configurePreset": "linux-RelWithDebInfo-config",
             "cleanFirst": false,
             "targets": [
                 "OrcaSlicer"
             ]
+        },
+        {
+            "name": "linux-RelWithDebInfo-build-profile-validator",
+            "displayName": "Build preset profile-validator - RelWithDebInfo",
+            "description": "",
+            "configurePreset": "linux-RelWithDebInfo-config",
+            "cleanFirst": false,
+            "targets": [
+                "OrcaSlicer_profile_validator"
+            ]
         }
     ]
+    // "workflowPresets": [
+    //     {
+    //         "name": "Build all - RelWithDebInfo",
+    //         "description": "",
+    //         "displayName": "",
+    //         "steps": [
+    //             {
+    //                 "type": "configure",
+    //                 "name": "linux-RelWithDebInfo-config"
+    //             },
+    //             {
+    //                 "type": "build",
+    //                 "name": "linux-RelWithDebInfo-build"
+    //             },
+    //             {
+    //                 "type": "build",
+    //                 "name": "linux-RelWithDebInfo-build-profile-validator"
+    //             }
+    //         ]
+    //     }
+    // ]
 }
