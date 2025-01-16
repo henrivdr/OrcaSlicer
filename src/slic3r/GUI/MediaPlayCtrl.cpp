@@ -292,7 +292,7 @@ void MediaPlayCtrl::Play()
 
     if (m_lan_proto <= MachineObject::LVL_Disable && (m_lan_mode || !m_remote_support)) {
         Stop(m_lan_proto == MachineObject::LVL_None 
-            ? _L("Problem occured. Please update the printer firmware and try again.")
+            ? _L("Problem occurred. Please update the printer firmware and try again.")
             : _L("LAN Only Liveview is off. Please turn on the liveview on printer screen."));
         return;
     }
@@ -389,7 +389,7 @@ void MediaPlayCtrl::Stop(wxString const &msg)
     }
 
     auto tunnel = m_url.empty() ? "" : into_u8(wxURI(m_url).GetPath()).substr(1);
-    if (auto n = tunnel.find_first_of('/_'); n != std::string::npos)
+    if (auto n = tunnel.find_first_of("/_"); n != std::string::npos)
         tunnel = tunnel.substr(0, n);
     if (last_state != wxMEDIASTATE_PLAYING && m_failed_code != 0 
             && m_last_failed_codes.find(m_failed_code) == m_last_failed_codes.end()
